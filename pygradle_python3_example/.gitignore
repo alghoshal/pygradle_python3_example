@@ -18,3 +18,4 @@ examples/example-project/activate
 examples/example-project/pinned.txt
 .DS_Store
 /.mypy_cache/
+.externalToolBuilders
