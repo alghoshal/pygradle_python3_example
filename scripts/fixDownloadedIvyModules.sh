@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## (3) Fixes issues with downloaded modules & Ivy files - sphinxcontrib-websupport-1.1.2, Babel-1.3, typing-3.5.2 & flake8-3.6.0
 
 ### (3.1) Fix sphinxcontrib-websupport - name contains '-', replace with '_'

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export JAVA_HOME=~/Tools/jdk1.8.0_151
 
 mkdir -p ~/.gradle/pygradle-repo
