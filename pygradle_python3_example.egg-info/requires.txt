@@ -1,0 +1,10 @@
+requests
+pytz
+packaging
+setuptools
+python-dateutil
+pyparsing
+sphinxcontrib-websupport
+typing
+configparser
+chardet

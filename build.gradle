@@ -1,0 +1,79 @@
+buildscript {
+configurations.all {
+        resolutionStrategy {
+            force 'pypi:pip:18.1'
+	    force 'pypi:six:1.16.0'
+	    force 'pypi:setuptools:45.2.0'
+        }
+    }
+    repositories {
+        mavenCentral()
+        ivy {
+        url "https://plugins.gradle.org/m2/"
+        layout('pattern') {
+          ivy "[organisation]/[module]/[revision]/[module]-[revision].ivy"
+          artifact "[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"
+          m2compatible true
+        }
+        }
+    }
+    dependencies{
+
+      classpath 'gradle.plugin.com.linkedin.pygradle:pygradle-plugin:0.9.11'
+      classpath 'commons-io:commons-io:2.16.1'
+      classpath 'com.eclipsesource.minimal-json:minimal-json:0.9.5'
+
+}
+}
+
+apply plugin: "com.linkedin.python-sdist"
+apply plugin: com.linkedin.gradle.python.plugin.WheelFirstPlugin
+
+
+python {
+        details {
+                pythonVersion = '3.8'
+        }
+
+	forceVersion('pypi', 'flake8', '3.6.0')
+ 	forceVersion('pypi', 'six', '1.16.0')
+ 	forceVersion('pypi', 'colorama', '0.3.5')
+ 	forceVersion('pypi', 'packaging', '19.2')
+ 	forceVersion('pypi', 'setuptools', '45.2.0')
+ 	forceVersion('pypi', 'sphinxcontrib-websupport', '1.1.2')
+ 	forceVersion('pypi', 'typing', '3.5.2')
+ 	forceVersion('pypi', 'configparser', '3.5.0')
+ 	forceVersion('pypi', 'pyparsing', '2.1.9')
+ 	forceVersion('pypi', 'chardet', '2.3.0')
+ 	forceVersion('pypi', 'pytz', '2016.4')
+}
+
+dependencies {
+
+
+
+    python 'pypi:requests:2.20.0'
+
+    python 'pypi:pytz:2016.4'
+    python 'pypi:packaging:19.2'
+    python 'pypi:setuptools:45.2.0'
+    python 'pypi:python-dateutil:2.6.0'
+    python 'pypi:pyparsing:2.1.9'
+    python 'pypi:sphinxcontrib-websupport:1.1.2'
+    python 'pypi:typing:3.5.2'
+    python 'pypi:configparser:3.5.0'
+    python 'pypi:chardet:2.3.0'
+
+}
+
+repositories {
+
+   ivy{
+		url "${System.env.HOME}/.gradle/pygradle-repo/"
+		layout 'pattern' , {
+			artifact '[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
+			ivy '[organisation]/[module]/[revision]/[module]-[revision].ivy'
+		}
+	}
+
+}
