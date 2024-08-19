@@ -1,0 +1,7 @@
+README.md
+setup.py
+pygradle_python3_example.egg-info/PKG-INFO
+pygradle_python3_example.egg-info/SOURCES.txt
+pygradle_python3_example.egg-info/dependency_links.txt
+pygradle_python3_example.egg-info/requires.txt
+pygradle_python3_example.egg-info/top_level.txt

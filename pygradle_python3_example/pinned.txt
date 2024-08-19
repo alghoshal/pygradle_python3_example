@@ -1,0 +1,10 @@
+requests==2.20.0
+pytz==2016.4
+packaging==19.2
+setuptools==45.2.0
+python-dateutil==2.6.0
+pyparsing==2.1.9
+sphinxcontrib-websupport==1.1.2
+typing==3.5.2
+configparser==3.5.0
+chardet==2.3.0
