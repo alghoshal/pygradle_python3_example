@@ -47,7 +47,8 @@ $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-imp
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ six:1.16.0
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ snowballstemmer:1.1.0
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ Sphinx:1.8.1
-$JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ sphinxcontrib-$JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ websupport:1.1.2
+$JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ sphinxcontrib
+$JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ websupport:1.1.2
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ typing:3.5.2
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ urllib3:1.21.1
 $JAVA_HOME/bin/java -jar ~/Workspaces/pygradle/build/pivy-importer/libs/pivy-importer-0.12.11-SNAPSHOT-all.jar --repo ~/.gradle/pygradle-repo/ virtualenv:16.0.0
