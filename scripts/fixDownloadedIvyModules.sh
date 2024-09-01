@@ -10,7 +10,7 @@ fi
 ## (3) Fixes issues with downloaded modules & Ivy files - sphinxcontrib-websupport-1.1.2, Babel-1.3, typing-3.5.2 & flake8-3.6.0
 
 ### (3.1) Fix sphinxcontrib-websupport - name contains '-', replace with '_'
-ln -s $pygradle_repo/pypi/sphinxcontrib-websupport $pygradle_repo/pypi/sphinxcontrib_websupport
+ln -s $pygradle_repo/pypi/sphinxcontrib-websupport/1.1.2 $pygradle_repo/pypi/sphinxcontrib_websupport/1.1.2
 ln -s $pygradle_repo/pypi/sphinxcontrib-websupport/1.1.2/sphinxcontrib-websupport-1.1.2.tar.gz $pygradle_repo/pypi/sphinxcontrib_websupport/1.1.2/sphinxcontrib_websupport-1.1.2.tar.gz
 cp -s $pygradle_repo/pypi/sphinxcontrib-websupport/1.1.2/sphinxcontrib-websupport-1.1.2.ivy $pygradle_repo/pypi/sphinxcontrib_websupport/1.1.2/sphinxcontrib_websupport-1.1.2.ivy
 
