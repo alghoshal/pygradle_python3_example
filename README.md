@@ -11,29 +11,34 @@
 	* Downloads from git       	 ~/Workspaces/
 
 ## --- Start ---
-	export JAVA_HOME=~/Tools/jdk1.8.0_151
-
+	JAVA_HOME=~/Tools/jdk1.8.0_151
+	APP_HOME=~
+	pygradle_repo=$APP_HOME/.gradle/pygradle-repo
+	workspace=$APP_HOME/Workspaces
+	gradle_home=$APP_HOME/Tools/gradle
+	export JAVA_HOME=$JAVA_HOME
+	
 ### (1) Download & Build pivy-importer
-	cd ~/Workspaces/
-	git clone https://github.com/linkedin/pygradle.git
-
-	cd pygradle/pivy-importer
-	~/Tools/gradle/gradle-5.0/bin/gradle build
+	RUN wget https://github.com/linkedin/pygradle/archive/refs/heads/master.zip -O $workspace/pygr_master.zip
+		
+	RUN unzip $workspace/pygr_master.zip -d $workspace
+		
+	RUN $gradle_home/gradle-5.0/bin/gradle build -b $workspace/pygradle-master/pivy-importer/build.gradle
 
 ### (2) Download necessary Modules & Ivy files using pivy-importer
 #### (2.1) Download pygradle_python3_example
-	cd ~/Workspaces/
-	git clone https://github.com/alghoshal/pygradle_python3_example.git
+	RUN wget https://github.com/alghoshal/pygradle_python3_example/archive/refs/heads/main.zip -O $workspace/pygrexg_master.zip
+	
+	RUN unzip $workspace/pygrexg_master.zip -d $workspace
 
 #### (2.2) Run downloader script
-	bash ~/Workspaces/pygradle_python3_example/scripts/downloadPyGradleDependecies.sh
+	bash $workspace/pygradle_python3_example/scripts/downloadPyGradleDependecies.sh
 
 ### (3) Fix downloaded modules - issues with name, case, underscore, suffix, etc.
-	bash ~/Workspaces/pygradle_python3_example/scripts/fixDownloadedIvyModules.sh
+	bash $workspace/pygradle_python3_example/scripts/fixDownloadedIvyModules.sh
 
 ### (4) Build pygradle_python3_example 
-	cd ~/Workspaces/pygradle_python3_example
-	~/Tools/gradle/gradle-5.0/bin/gradle build
+	$gradle_home/gradle-5.0/bin/gradle $workspace/pygradle_python3_example/build.gradle
 
 ## End goal: A successful build using pygradle on Python-3! 
 
