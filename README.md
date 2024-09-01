@@ -32,7 +32,7 @@
 	RUN unzip $workspace/pygrexg_master.zip -d $workspace
 
 #### (2.2) Run downloader script
-	bash $workspace/pygradle_python3_example/scripts/downloadPyGradleDependecies.sh
+	bash $workspace/pygradle_python3_example/scripts/downloadPyGradleDependencies.sh
 
 ### (3) Fix downloaded modules - issues with name, case, underscore, suffix, etc.
 	bash $workspace/pygradle_python3_example/scripts/fixDownloadedIvyModules.sh
