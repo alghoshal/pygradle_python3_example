@@ -1,10 +1,20 @@
 #!/bin/bash
 
-export JAVA_HOME=~/Tools/jdk1.8.0_151
 
 pygradle_repo=~/.gradle/pygradle-repo
 workspace=~/Workspaces
+JAVA_HOME=~/Tools/jdk1.8.0_151
 
+if [ $# -eq 3 ]
+then
+	pygradle_repo=$1
+	workspace=$2
+	JAVA_HOME=$3
+fi
+
+exit 1
+
+export $JAVA_HOME
 mkdir -p $pygradle_repo/
 
 # Download jars
