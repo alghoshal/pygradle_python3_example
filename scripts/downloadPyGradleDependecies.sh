@@ -12,8 +12,6 @@ then
 	JAVA_HOME=$3
 fi
 
-exit 1
-
 export $JAVA_HOME
 mkdir -p $pygradle_repo/
 
