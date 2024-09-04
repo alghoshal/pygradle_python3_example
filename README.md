@@ -10,6 +10,7 @@
 	* Downloaded pygradle repo	 ~/.gradle/pygradle-repo/
 	* Downloads from git       	 ~/Workspaces/
 
+# (I) Build locally
 ## --- Start ---
 	JAVA_HOME=~/Tools/jdk1.8.0_151
 	APP_HOME=~
@@ -41,5 +42,8 @@
 	$gradle_home/gradle-5.0/bin/gradle $workspace/pygradle_python3_example/build.gradle
 
 ## End goal: A successful build using pygradle on Python-3! 
+
+# (II) Alternate build: using Docker
+	docker build -t pygradle_python3_example-1 -f Dockerfile .
 
 ## --- Finish ---

@@ -92,15 +92,13 @@ RUN wget https://github.com/linkedin/pygradle/archive/refs/heads/master.zip -O $
 
 # (2) Download necessary Modules & Ivy files using pivy-importer
 ## (2.1) Copy scripts
-COPY scripts $workspace/pygradle_python3_example/scripts
+COPY . $workspace/pygradle_python3_example/
 
 ## (2.2) Run downloader script
 RUN bash $workspace/pygradle_python3_example/scripts/downloadPyGradleDependencies.sh $pygradle_repo $workspace $JAVA_HOME \
 	&& bash $workspace/pygradle_python3_example/scripts/fixDownloadedIvyModules.sh $pygradle_repo
 
 # (4) Build pygradle_python3_example
-COPY . $workspace/pygradle_python3_example/
-
 RUN $gradle_home/gradle-5.0/bin/gradle -D home.location=$APP_HOME -D python.version=$(python3 -V | sed -e 's,.*\(3\.[[:digit:]]*\)\(\.[[:digit:]]*\),\1,g') build -b $workspace/pygradle_python3_example/build.gradle \
 	&& echo "Build Success!"
 
